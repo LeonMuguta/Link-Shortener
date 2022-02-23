@@ -8,18 +8,22 @@ const UrlSection = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('https://api-ssl.bitly.com/v4/shorten', {
-            method: 'POST',
+        const info = { long_url: "https://dev.bitly.com/", domain: "bit.ly", group_guid: "Ba1bc23dE4F" }
+
+        fetch("https://api-ssl.bitly.com/v4/shorten", {
+            method: "POST",
             headers: {
-                'Authorization': 'Bearer {b41b45e401ba987fae260afe2777bb230c7ef5e8}',
-                'Content-Type': 'application/json'
+                "Authorization": "Bearer {b41b45e401ba987fae260afe2777bb230c7ef5e8}",
+                "Content-Type": "application/json"
             },
-            body: { "long_url": "https://dev.bitly.com/", "domain": "bit.ly", "group_guid": "Ba1bc23dE4F" }
+            body: JSON.stringify(info)
         }).then((res) => {
-            res.json()
+            res.json();
             console.log(res);
             setIsLoading(false);
-        })
+        }).then((data) => {
+            console.log(data);
+    })
     }
 
     return ( 
