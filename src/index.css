@@ -46,7 +46,28 @@ body {
   width: 30em;
 }
 
-.paste-section button {
+.paste-section .button {
   border-radius: 1.5em;
   height: 2.5em;
+}
+
+/* Results bar */
+.parent {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.child {
+  display: inline-block;
+}
+
+/* Short URL link */
+.shortUrl {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.buttonCopy {
+  height: 2.5em;
+  border-radius: 1em;
 }
