@@ -18,7 +18,7 @@ const UrlSection = () => {
         return fetch("https://api-ssl.bitly.com/v4/shorten", {
             method: "POST",
             headers: {
-                "Authorization": "Bearer b41b45e401ba987fae260afe2777bb230c7ef5e8",
+                "Authorization": "Bearer {AUTH TOKEN}",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(info)
